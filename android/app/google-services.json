@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "873281320144",
+    "project_id": "condo-pigeon",
+    "storage_bucket": "condo-pigeon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873281320144:android:294e91af3b031423e85ad5",
+        "android_client_info": {
+          "package_name": "mrv.solutions.condo_pigeon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873281320144-u3b6f8psvvtf9o6h1uneliojo4td5e9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhEarxkUAAwbVbXQ2-teEJdOT7MSb_FQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873281320144-u3b6f8psvvtf9o6h1uneliojo4td5e9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

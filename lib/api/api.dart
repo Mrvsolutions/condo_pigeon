@@ -1,0 +1,22 @@
+
+const String ROOT="https://www.condopigeon.com/condoUsers";
+const String RegistrationsAPI="$ROOT/webServiceAPI/signupResidenceUser.php";
+const String LoginAPI="$ROOT/webServiceAPI/signinResidenceUser.php";
+const String VerifyEmailCodeAPI="$ROOT/webServiceAPI/signupVerifyCode.php";
+const String GetAnnouncementDataAPI="$ROOT/webServiceAPI/ancmntCList.php";
+const String AnnouncementAknwlgAPI="$ROOT/webServiceAPI/ancmntAck.php";
+const String GetPartyRoomListAPI="$ROOT/webServiceAPI/partyRoomList.php";
+const String GetServiceElevetorListAPI="$ROOT/webServiceAPI/serviceElevatorList.php";
+const String SendPartyRoomRequestAPI="$ROOT/webServiceAPI/partyRoomRequest.php";
+const String SendServiceElevetorRequestAPI="$ROOT/webServiceAPI/serviceElevatorRequest.php";
+const String DeletePartyRoomAPI="$ROOT/webServiceAPI/partyRoomDelete.php";
+const String DeleteServiceElevetorAPI="$ROOT/webServiceAPI/serviceElevatorDelete.php";
+const String ResendVerificationCodeAPI="$ROOT/webServiceAPI/resendVerificationCode.php";
+const String ChangePasswordAPI="$ROOT/webServiceAPI/changePswd.php";
+const String GetAllMessageAPI="$ROOT/webServiceAPI/messagesGet.php";
+const String SendMessageAPI="$ROOT/webServiceAPI/messagesSend.php";
+const String EditProfileAPI="$ROOT/webServiceAPI/editRuProfile.php";
+const String UploadProfilePicAPI="$ROOT/webServiceAPI/uploadRuProfileImg.php";
+const String ForgotPassWordAPI="$ROOT/webServiceAPI/forgotPswd.php";
+const String TokenRegistrationAPI="$ROOT/webServiceAPI/tokenStore.php";
+const String SignoutAPI="$ROOT/webServiceAPI/signoutResidenceUser.php";

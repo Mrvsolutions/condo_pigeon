@@ -24,7 +24,7 @@ class _SignupPagesState extends State<SignupPages> {
   bool _isLoading = false;
   var reg = RegExp(
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-
+  RegExp regepassword =RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
   TextEditingController _aptNoController = new TextEditingController();
   TextEditingController _nameController = new TextEditingController();
   TextEditingController _emailController = new TextEditingController();
@@ -131,6 +131,7 @@ class _SignupPagesState extends State<SignupPages> {
                             TextFormField(
                               autovalidateMode:
                                   AutovalidateMode.onUserInteraction,
+                              maxLength: 10,
                               validator: (value) {
                                 if (value.isEmpty) {
                                   return StrEnterContactNo;
@@ -196,7 +197,7 @@ class _SignupPagesState extends State<SignupPages> {
                               validator: (value) {
                                 if (value.isEmpty) {
                                   return StrEnterPassword;
-                                } else if (value.length < 6) {
+                                } else if (!regepassword.hasMatch(value)) {
                                   return StrValidPass;
                                 }
                                 return null;

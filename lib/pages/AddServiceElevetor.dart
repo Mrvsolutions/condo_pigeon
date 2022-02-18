@@ -87,7 +87,7 @@ class _AddServiceElevetorState extends State<AddServiceElevetor> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppToolbar(context, _titleheading, true),
+        appBar: AppToolbar(context, _titleheading, true,false),
         body: Container(
           color: Colors.white,
           margin: EdgeInsets.only(top: 5),
@@ -582,6 +582,7 @@ class _AddServiceElevetorState extends State<AddServiceElevetor> {
           changeColor(Colors.grey);
           _StartTime = null;
           _EndTime = null;
+          Navigator.of(context).pop();
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);
         }

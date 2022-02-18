@@ -18,7 +18,7 @@ class ServiceElevetorDetail extends StatelessWidget {
     return MaterialApp(
       builder: EasyLoading.init(),
       home: Scaffold(
-          appBar: AppToolbar(context, _item.se_date,true),
+          appBar: AppToolbar(context, _item.se_date,true,false),
           body: Container(
             child: Padding(
               padding: const EdgeInsets.all(20),

@@ -18,7 +18,7 @@ class PartyRoomDetail extends StatelessWidget {
     return MaterialApp(
       builder: EasyLoading.init(),
       home: Scaffold(
-          appBar: AppToolbar(context, _item.pr_eventname,true),
+          appBar: AppToolbar(context, _item.pr_eventname,true,false),
           body: Container(
             child: Padding(
               padding: const EdgeInsets.all(20),

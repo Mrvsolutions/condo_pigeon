@@ -32,40 +32,40 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 10,
                 ),
-                GestureDetector(
-                  child: Container(
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(18.0),
-                      child: Row(
-                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Expanded(
-                            child: Container(
-                              child: Text(
-                                "Notifications",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 18),
-                              ),
-                            ),
-                          ),
-                          Image.asset(
-                            "assets/ic_next_right.png",
-                            width: 20,
-                            height: 20,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  onTap: (){
-
-                  },
-                ),
-                SizedBox(height: 5,),
+                // GestureDetector(
+                //   child: Container(
+                //     color: Colors.white,
+                //     child: Padding(
+                //       padding: const EdgeInsets.all(18.0),
+                //       child: Row(
+                //        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: <Widget>[
+                //           Expanded(
+                //             child: Container(
+                //               child: Text(
+                //                 "Notifications",
+                //                 style: TextStyle(
+                //                     color: Colors.black,
+                //                     fontFamily: "Montserrat",
+                //                     fontWeight: FontWeight.w500,
+                //                     fontSize: 18),
+                //               ),
+                //             ),
+                //           ),
+                //           Image.asset(
+                //             "assets/ic_next_right.png",
+                //             width: 20,
+                //             height: 20,
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                //   onTap: (){
+                //
+                //   },
+                // ),
+                // SizedBox(height: 5,),
                 GestureDetector(
                   child: Container(
                     color: Colors.white,

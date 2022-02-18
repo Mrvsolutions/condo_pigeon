@@ -62,7 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     currentTitle = titleList[widget._selectedIndex];
     return Scaffold(
-      appBar: AppToolbar(context, currentTitle,false),
+      appBar: AppToolbar(context, currentTitle,false,false),
       body: Center(
         child: _widgetOptions.elementAt(widget._selectedIndex),
       ),

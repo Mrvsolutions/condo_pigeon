@@ -24,7 +24,7 @@ class _AnnouncementDetailState extends State<AnnouncementDetail> {
     return MaterialApp(
       builder: EasyLoading.init(),
       home: Scaffold(
-          appBar: AppToolbar(context, widget._item.ancmnt_title,true),
+          appBar: AppToolbar(context, widget._item.ancmnt_title,true,false),
           body: Container(
             child: Padding(
               padding: const EdgeInsets.all(20),

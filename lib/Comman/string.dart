@@ -8,7 +8,7 @@ const String StrEnterValidEmailId="Please enter Valid Email-Id";
 const String StrEnterPassword="Please enter Password";
 const String StrEnterOldPassword="Please enter old Password";
 const String StrEnterNewPassword="Please enter new Password";
-const String StrValidPass="Password should be min 6 characters";
+const String StrValidPass="should contain at least one upper case, one lower case, one digit, one Special character, 8 characters in length ";
 const String StrEnterConfmpass="Please enter Confirm Password";
 const String StrEnterContactNo="Please enter contact no";
 const String StrnotmatchPassword= "Password and confirm password not same";
@@ -37,7 +37,7 @@ const String ServiceEltrList= "ServiceEltrList";
 const String strSelectDate= "Please select date first";
 const String strSelectothertime= "Please select other time";
 const String strSelectotherdate= "Please select other date this date is full.Thank you";
-const String strSelectfuturedate= "Please select current date or future date";
+const String strSelectfuturedate= "Please select future date";
 const String strenterallValue= "Please enter all value first";
 const String strendDatevaluenotvalid= "End date must be greater than start date";
 

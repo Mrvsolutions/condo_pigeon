@@ -88,7 +88,7 @@ class _AddPartyRoomPageState extends State<AddPartyRoomPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppToolbar(context, _titleheading, true),
+        appBar: AppToolbar(context, _titleheading, true,false),
         body: Container(
           margin: EdgeInsets.only(top: 5),
           alignment: Alignment.topCenter,
@@ -296,6 +296,7 @@ class _AddPartyRoomPageState extends State<AddPartyRoomPage> {
           if (!currentScope.hasPrimaryFocus && currentScope.hasFocus) {
             FocusManager.instance.primaryFocus.unfocus();
           }
+          Navigator.of(context).pop();
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);
         }

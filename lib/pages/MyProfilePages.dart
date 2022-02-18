@@ -125,7 +125,7 @@ class _MyProfilePagesState extends State<MyProfilePages> {
     return MaterialApp(
       builder: EasyLoading.init(),
       home: new Scaffold(
-          appBar: AppToolbar(context, _titleheading, true),
+          appBar: AppToolbar(context, _titleheading, true,false),
           body: new Container(
             color: Colors.white,
             child: new ListView(

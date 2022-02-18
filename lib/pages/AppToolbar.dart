@@ -1,11 +1,12 @@
 import 'package:condo_pigeon/pages/AddPartyRoomPage.dart';
 import 'package:condo_pigeon/pages/AddServiceElevetor.dart';
 import 'package:condo_pigeon/pages/HomePages.dart';
+import 'package:condo_pigeon/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 PreferredSize AppToolbar(
-    BuildContext context, String _titleheading, bool _isVisibleBack) {
+    BuildContext context, String _titleheading, bool _isVisibleBack, bool IsFromForgotorSignup) {
   bool _isVisible = false;
   bool _IsHomeIconShow = false;
   int selectedindix = 0;
@@ -35,15 +36,15 @@ PreferredSize AppToolbar(
       toolbarHeight: 90,
       flexibleSpace: Container(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
           child: Column(children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Align(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.centerLeft,
                   child: Container(
-                    height: 25,
+                    height: 35,
                     child: Visibility(
                       visible: _isVisibleBack,
                       child: IconButton(
@@ -52,11 +53,21 @@ PreferredSize AppToolbar(
                           color: Colors.black,
                         ),
                         onPressed: () {
-                          Navigator.of(context).pushAndRemoveUntil(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      HomePages(selectedindix)),
-                              (Route<dynamic> route) => false);
+                           // Navigator.of(context).pop(true);
+                          if (IsFromForgotorSignup) {
+                            Navigator.of(context).pushAndRemoveUntil(
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        LoginPage()),
+                                    (Route<dynamic> route) => false);
+                          }
+                          else {
+                            Navigator.of(context).pushAndRemoveUntil(
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        HomePages(selectedindix)),
+                                    (Route<dynamic> route) => false);
+                          }
                         },
                       ),
                     ),
@@ -87,11 +98,11 @@ PreferredSize AppToolbar(
                       }
                     },
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                       child: Icon(
                         _IsHomeIconShow ? Icons.home : Icons.add_circle,
                         color: Colors.black,
-                        size: 25,
+                        size: 35,
                       ),
                     ),
                   ),

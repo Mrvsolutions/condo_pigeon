@@ -38,7 +38,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     return MaterialApp(
       builder: EasyLoading.init(),
       home: Scaffold(
-        appBar: AppToolbar(context, _titleheading,true),
+        appBar: AppToolbar(context, _titleheading,true,true),
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -102,11 +102,12 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     child: RaisedButton(
                       onPressed: () {
                         if(_emailController.text.isNotEmpty) {
+                          FocusManager.instance.primaryFocus?.unfocus();
                           EditProfileRequest(_emailController.text);
                         }
                       },
                       child: Text(
-                        "CONFIRM MAIL",
+                        "CONFIRM",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: "Montserrat",
@@ -153,11 +154,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           EasyLoadingToastMessage(context, jsonResponse['message']);
           setState(() {
           });
-          _emailController.clear();
           Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(
                   builder: (BuildContext context) => LoginPage()),
                   (Route<dynamic> route) => false);
+          _emailController.clear();
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);
         }

@@ -98,7 +98,7 @@ PreferredSize AppToolbar(
                       }
                     },
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                       child: Icon(
                         _IsHomeIconShow ? Icons.home : Icons.add_circle,
                         color: Colors.black,

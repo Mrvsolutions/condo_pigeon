@@ -128,6 +128,7 @@ class PartyRoomDetail extends StatelessWidget {
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);
         }
+        Navigator.of(context).pop();
       }
     } else {
       EasyLoading.dismiss();

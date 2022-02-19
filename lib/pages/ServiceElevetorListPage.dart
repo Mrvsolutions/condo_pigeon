@@ -40,7 +40,7 @@ class _ServiceElevetorListPageState extends State<ServiceElevetorListPage> {
       jsonResponse = json.decode(response.body);
       if (jsonResponse != null) {
         if (jsonResponse['success'] == 1) {
-          CustomeSnackBarMessage(context, jsonResponse['message']);
+      //    CustomeSnackBarMessage(context, jsonResponse['message']);
           loadedAnnouncements = jsonResponse['srvcelvtrdata'];
           _listserviceElevetor = loadedAnnouncements
               .map((model) => ServiceElevetorItem.fromJson(model))
@@ -51,7 +51,7 @@ class _ServiceElevetorListPageState extends State<ServiceElevetorListPage> {
           print(_listserviceElevetor.length);
           print(_listserviceElevetor[0].se_starttime);
         } else {
-          CustomeSnackBarMessage(context, jsonResponse['message']);
+        //  CustomeSnackBarMessage(context, jsonResponse['message']);
         }
         return _listserviceElevetor;
       }

@@ -38,7 +38,7 @@ class _PartyRoomListPageState extends State<PartyRoomListPage> {
       jsonResponse = json.decode(response.body);
       if (jsonResponse != null) {
         if (jsonResponse['success'] == 1) {
-          CustomeSnackBarMessage(context, jsonResponse['message']);
+     //     CustomeSnackBarMessage(context, jsonResponse['message']);
           loadedAnnouncements = jsonResponse['prtyrmdata'];
           _listpartroom = loadedAnnouncements
               .map((model) => PartyRoomItem.fromJson(model))
@@ -49,7 +49,7 @@ class _PartyRoomListPageState extends State<PartyRoomListPage> {
           await sharedPreferences.setString(PartRoomList, encodedData);
           print(_listpartroom.length);
         } else {
-          CustomeSnackBarMessage(context, jsonResponse['message']);
+     //     CustomeSnackBarMessage(context, jsonResponse['message']);
         }
         return _listpartroom;
       }

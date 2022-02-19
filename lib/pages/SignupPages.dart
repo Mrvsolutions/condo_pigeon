@@ -205,6 +205,7 @@ class _SignupPagesState extends State<SignupPages> {
                               decoration: InputDecoration(
                                 hintText: "Enter Password",
                                 labelText: "Password",
+                                errorMaxLines: 2
                               ),
                               controller: _passwordController,
                               obscureText: true,

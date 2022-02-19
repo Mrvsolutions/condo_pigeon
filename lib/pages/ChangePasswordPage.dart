@@ -20,6 +20,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
   TextEditingController _OldPassController = new TextEditingController();
   TextEditingController _NewPAssController = new TextEditingController();
   TextEditingController _ConfPassController = new TextEditingController();
+  RegExp regepassword =RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -83,14 +84,14 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       validator: (value) {
                         if (value.isEmpty) {
                           return StrEnterNewPassword;
-                        } else if (value.length < 6) {
+                        } else if (!regepassword.hasMatch(value)) {
                           return StrValidPass;
                         }
                         return null;
                       },
                       controller: _NewPAssController,
                       decoration: InputDecoration(
-                          hintText: "Enter new password", labelText: "new Password"),
+                          hintText: "Enter new password", labelText: "new Password", errorMaxLines: 2),
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Montserrat",
@@ -209,6 +210,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);
         }
+        Navigator.of(context).pop();
       }
     } else {
       EasyLoading.dismiss();

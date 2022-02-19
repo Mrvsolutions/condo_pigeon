@@ -37,14 +37,14 @@ class AnnouncementsListPageState extends State<AnnouncementsListPage> {
       jsonResponse = json.decode(response.body);
       if (jsonResponse != null) {
         if (jsonResponse['success'] == 1) {
-          CustomeSnackBarMessage(context, jsonResponse['message']);
+      //    CustomeSnackBarMessage(context, jsonResponse['message']);
           loadedAnnouncements = jsonResponse['ancmntdata'];
           _listannmnt = loadedAnnouncements
               .map((model) => AnnouncementItem.fromJson(model))
               .toList();
           print(_listannmnt.length);
         } else {
-          CustomeSnackBarMessage(context, jsonResponse['message']);
+        //  CustomeSnackBarMessage(context, jsonResponse['message']);
         }
         return _listannmnt;
       }

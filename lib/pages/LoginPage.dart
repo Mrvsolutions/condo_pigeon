@@ -340,10 +340,12 @@ class _LoginPageState extends State<LoginPage> {
                     (Route<dynamic> route) => false);
           }
           else{
-            Navigator.of(context).pushAndRemoveUntil(
+            UsernameController.clear();
+            PasswordController.clear();
+            Navigator.push(
+                context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => ChangePasswordPage()),
-                    (Route<dynamic> route) => false);
+                builder: (context) => ChangePasswordPage()));
           }
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);

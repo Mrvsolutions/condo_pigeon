@@ -183,6 +183,7 @@ class _AnnouncementDetailState extends State<AnnouncementDetail> {
         } else {
           EasyLoadingToastMessage(context, jsonResponse['message']);
         }
+        Navigator.of(context).pop();
       }
     } else {
       EasyLoading.dismiss();

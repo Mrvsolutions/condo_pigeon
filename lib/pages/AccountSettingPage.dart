@@ -142,33 +142,38 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                   ),
                 ),
                 SizedBox(height: 5,),
-                Container(
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Expanded(
-                          child: Container(
-                            child: Text(
-                              "Delete Account",
-                              style: TextStyle(
-                                  color: Colors.red,
-                                  fontFamily: "Montserrat",
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 18),
+                GestureDetector(
+                  onTap: (){
+                    SigoutProfileAPI(context,false);
+                  },
+                  child: Container(
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Expanded(
+                            child: Container(
+                              child: Text(
+                                "Delete Account",
+                                style: TextStyle(
+                                    color: Colors.red,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 18),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 20,),
                 GestureDetector(
                   onTap: (){
-                    SigoutProfileAPI(context);
+                    SigoutProfileAPI(context,true);
                   },
                   child: Container(
                     color: Colors.white,
@@ -202,7 +207,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
       builder: EasyLoading.init(),
     );
   }
- SigoutProfileAPI(BuildContext context) async {
+ SigoutProfileAPI(BuildContext context,bool IsFromSignout) async {
 
     // setState(() {
     //   // _isLoading = true;
@@ -213,6 +218,9 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
     Map data = {'residence_user_id': _UserID};
     var jsonResponse = null;
     var url = Uri.parse(SignoutAPI);
+    if(!IsFromSignout) {
+      url = Uri.parse(DeleteAccountAPI);
+    }
     var response = await http.post(url, body: data);
     if (response.statusCode == 200) {
       jsonResponse = json.decode(response.body);

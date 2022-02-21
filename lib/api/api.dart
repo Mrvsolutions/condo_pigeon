@@ -20,3 +20,4 @@ const String UploadProfilePicAPI="$ROOT/webServiceAPI/uploadRuProfileImg.php";
 const String ForgotPassWordAPI="$ROOT/webServiceAPI/forgotPswd.php";
 const String TokenRegistrationAPI="$ROOT/webServiceAPI/tokenStore.php";
 const String SignoutAPI="$ROOT/webServiceAPI/signoutResidenceUser.php";
+const String DeleteAccountAPI="$ROOT/webServiceAPI/deleteResidenceUser.php";

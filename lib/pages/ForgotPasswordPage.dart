@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:condo_pigeon/Comman/ForgotDialogPage.dart';
 import 'package:condo_pigeon/Comman/Util.dart';
 import 'package:condo_pigeon/Comman/string.dart';
 import 'package:condo_pigeon/api/api.dart';
@@ -150,18 +151,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       Map<String, dynamic> jsonResponse = jsonDecode(response.body);
       if (jsonResponse != null) {
         EasyLoading.dismiss();
-        if (jsonResponse['success'] == 1) {
-          EasyLoadingToastMessage(context, jsonResponse['message']);
-          setState(() {
-          });
-          Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(
-                  builder: (BuildContext context) => LoginPage()),
-                  (Route<dynamic> route) => false);
-          _emailController.clear();
-        } else {
-          EasyLoadingToastMessage(context, jsonResponse['message']);
-        }
+        showDialog(context: context,
+            builder: (BuildContext context) {
+              return ForgotDialogPage(StrEmail);
+            });
       }
     } else {
       EasyLoading.dismiss();
